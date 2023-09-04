@@ -1,0 +1,24 @@
+import { HeaderButton, HeaderButtonsContainer, HeaderContainer } from './styles'
+
+import coffeeLogo from '../../assets/coffee-delivery-logo.svg'
+import { MapPin, ShoppingCart } from '@phosphor-icons/react'
+
+export function Header() {
+  return (
+    <HeaderContainer>
+      <div>
+        <img src={coffeeLogo} />
+
+        <HeaderButtonsContainer>
+          <HeaderButton variant='purple'>
+            <MapPin size={20} weight='fill' />
+            Porto Alegre, RS
+          </HeaderButton>
+          <HeaderButton variant='yellow'>
+            <ShoppingCart size={20} weight='fill' />
+          </HeaderButton>
+        </HeaderButtonsContainer>
+      </div>
+    </HeaderContainer>
+  )
+}
