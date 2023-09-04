@@ -11,7 +11,21 @@ export const GlobalStyle = createGlobalStyle`
 body {
     background: ${({ theme }) => theme.colors.background};
     color: ${({ theme }) => theme.colors['base-text']};
-    -webkit-font-smoothing:antialiased
+    -webkit-font-smoothing: antialiased;
+}
+
+body, input-security, textarea, button{
+    font-family:  ${({ theme }) => theme.fonts.regular};
+    font-weight: 400;
+    font-size:  ${({ theme }) => theme.textSizes['text-m']};
+}
+
+button{
+    cursor: pointer
+}
+
+a {
+    text-decoration: none;
 }
     
 `
