@@ -27,10 +27,12 @@ export const defaultTheme = {
     'title-m': '1.5rem',
     'title-s': '1.25rem',
     'title-xs': '1.125rem',
+
     'text-l': '1.25rem',
     'text-m': '1rem',
     'text-s': '0.875rem',
     'text-xs': '0.75rem',
+
     tag: '0.625rem',
     'button-g': '0.875rem',
     'button-m': '0.75rem',
