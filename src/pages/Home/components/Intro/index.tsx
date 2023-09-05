@@ -1,4 +1,9 @@
-import { IntroContainer, IntroContent, IntroTitle } from './styles'
+import {
+  BenefitsContainer,
+  IntroContainer,
+  IntroContent,
+  IntroTitle,
+} from './styles'
 import introImg from '../../../../assets/intro-img.svg'
 import { RegularText } from '../../../../components/Typography'
 
@@ -16,6 +21,12 @@ export function Intro() {
               qualquer hora
             </RegularText>
           </section>
+          <BenefitsContainer>
+            <p>beneficio</p>
+            <p>beneficio</p>
+            <p>beneficio</p>
+            <p>beneficio</p>
+          </BenefitsContainer>
         </div>
         <img src={introImg} alt='' />
       </IntroContent>
