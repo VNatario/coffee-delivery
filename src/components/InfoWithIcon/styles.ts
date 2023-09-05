@@ -6,14 +6,14 @@ export const InfoWithIconContainer = styled.div`
   gap: 0.75rem;
 `
 interface IconContainerProps {
-  iconbg?: string
+  $iconbg?: string
 }
 
 export const IconContainer = styled.div<IconContainerProps>`
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: ${({ iconbg }) => iconbg};
+  background: ${({ $iconbg }) => $iconbg};
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   align-items: center;

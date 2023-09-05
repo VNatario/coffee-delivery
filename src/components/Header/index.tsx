@@ -10,11 +10,11 @@ export function Header() {
         <img src={coffeeLogo} />
 
         <HeaderButtonsContainer>
-          <HeaderButton variant='purple'>
+          <HeaderButton $variant='purple'>
             <MapPin size={20} weight='fill' />
             Porto Alegre, RS
           </HeaderButton>
-          <HeaderButton variant='yellow'>
+          <HeaderButton $variant='yellow'>
             <ShoppingCart size={20} weight='fill' />
           </HeaderButton>
         </HeaderButtonsContainer>
