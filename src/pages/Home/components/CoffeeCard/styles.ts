@@ -1,0 +1,72 @@
+import { css, styled } from 'styled-components'
+import { RegularText, TitleText } from '../../../../components/Typography'
+
+export const CoffeeCardContainer = styled.div`
+  width: 100%;
+  background: ${({ theme }) => theme.colors['base-card']};
+  border-radius: 6px 36px;
+  padding: 1.25rem;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  img {
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-top: -1.25rem;
+  }
+`
+
+export const Tags = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+
+  span {
+    ${({ theme }) => css`
+      background: ${theme.colors['yellow-light']};
+      color: ${theme.colors['yellow-dark']};
+      font-size: ${theme.textSizes.tag};
+      font-family: ${theme.fonts.regular};
+    `}
+    text-transform: uppercase;
+    padding: 0.25rem 0.5rem;
+    border-radius: 100px;
+    font-weight: 700;
+  }
+`
+
+export const Name = styled(TitleText).attrs({
+  size: 's',
+  color: 'subtitle',
+  weight: '700',
+})`
+  margin-bottom: 0.5rem;
+`
+
+export const Description = styled(RegularText).attrs({
+  size: 's',
+  color: 'label',
+})`
+  margin-bottom: 2rem;
+`
+
+export const CardFooter = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+`
