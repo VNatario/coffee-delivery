@@ -16,6 +16,8 @@ export const QuantityInputContainer = styled.div`
     background: none;
     border: none;
     color: ${({ theme }) => theme.colors['base-title']};
+    line-height: 1.3;
+    font-size: ${({ theme }) => theme.textSizes['text-m']};
 
     &:focus {
       outline: none;
