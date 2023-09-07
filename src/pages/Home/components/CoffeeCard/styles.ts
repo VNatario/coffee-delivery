@@ -70,3 +70,25 @@ export const CardFooter = styled.div`
     gap: 3px;
   }
 `
+
+export const AddCartWrapper = styled.div`
+  width: 7.5rem;
+
+  & > button {
+    width: 2.375rem;
+    height: 2.375rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: ${({ theme }) => theme.colors['purple-dark']};
+    color: ${({ theme }) => theme.colors['base-card']};
+    border-radius: 6px;
+    margin-left: 0.5rem;
+    transition: 400ms;
+
+    &:hover {
+      background: ${({ theme }) => theme.colors['purple-light']};
+    }
+  }
+`
