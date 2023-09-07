@@ -62,7 +62,7 @@ export const CardFooter = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   & > div {
     display: flex;
@@ -88,7 +88,7 @@ export const AddCartWrapper = styled.div`
     transition: 400ms;
 
     &:hover {
-      background: ${({ theme }) => theme.colors['purple-light']};
+      background: ${({ theme }) => theme.colors.purple};
     }
   }
 `
