@@ -3,6 +3,7 @@ import { TitleText } from '../../../../components/Typography'
 import { SectionTitle } from '../SectionTitle'
 import { CompleteOrderFormContainer, FormSectionContainer } from './styles'
 import { useTheme } from 'styled-components'
+import { AddressForm } from './AddressForm'
 
 export function CompleteOrderForm() {
   const { colors } = useTheme()
@@ -19,6 +20,8 @@ export function CompleteOrderForm() {
           subtitle='Informe o endereço onde deseja receber seu pedido'
           icon={<MapPinLine size={22} color={colors['yellow-dark']} />}
         />
+
+        <AddressForm />
       </FormSectionContainer>
     </CompleteOrderFormContainer>
   )
