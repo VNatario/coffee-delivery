@@ -21,4 +21,18 @@ export const AddressFormContainer = styled.div`
   column-gap: 0.75rem;
   row-gap: 1rem;
   grid-auto-flow: dense;
+
+  .cep {
+    grid-column: span 3;
+    /* span 3 => Ocupa 3 colunas  */
+    max-width: 12.5rem;
+  }
+
+  .street {
+    grid-column: span 3;
+  }
+
+  .complement {
+    grid-column: span 2;
+  }
 `
