@@ -1,4 +1,4 @@
-import { CompleteOrderForm } from './CompleteOrderForm'
+import { CompleteOrderForm } from './components/CompleteOrderForm'
 import { CheckoutContainer } from './styles'
 
 export function CheckoutPage() {

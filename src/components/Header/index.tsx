@@ -17,6 +17,7 @@ export function Header() {
             <MapPin size={20} weight='fill' />
             Porto Alegre, RS
           </HeaderButton>
+
           <NavLink to='/checkout'>
             <HeaderButton $variant='yellow'>
               <ShoppingCart size={20} weight='fill' />
