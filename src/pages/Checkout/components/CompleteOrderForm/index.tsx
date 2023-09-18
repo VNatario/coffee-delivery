@@ -11,7 +11,7 @@ export function CompleteOrderForm() {
 
   return (
     <CompleteOrderFormContainer>
-      <TitleText size='xs' color='subtitle'>
+      <TitleText $size='xs' $color='subtitle'>
         Complete seu pedido
       </TitleText>
 

@@ -1,6 +1,10 @@
-import { styled } from 'styled-components'
+import { css, styled } from 'styled-components'
 
-export const QuantityInputContainer = styled.div`
+interface QuantityInputContainerProps {
+  $size: 'sm' | 'm'
+}
+
+export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   flex: 1;
   background: ${({ theme }) => theme.colors['base-button']};
   display: flex;
@@ -22,6 +26,18 @@ export const QuantityInputContainer = styled.div`
     &:focus {
       outline: none;
     }
+
+    ${({ $size }) =>
+      $size === 'm' &&
+      css`
+        padding: 0.5rem;
+      `}
+
+    ${({ $size }) =>
+      $size === 'sm' &&
+      css`
+        padding: 0.3rem 0.5rem;
+      `}
   }
 `
 

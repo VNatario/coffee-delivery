@@ -44,16 +44,16 @@ export const Tags = styled.div`
 `
 
 export const Name = styled(TitleText).attrs({
-  size: 's',
-  color: 'subtitle',
-  weight: '700',
+  $size: 's',
+  $color: 'subtitle',
+  $weight: '700',
 })`
   margin-bottom: 0.5rem;
 `
 
 export const Description = styled(RegularText).attrs({
-  size: 's',
-  color: 'label',
+  $size: 's',
+  $color: 'label',
 })`
   margin-bottom: 2rem;
 `
