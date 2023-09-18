@@ -12,7 +12,18 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
   justify-content: space-between;
   gap: 4px;
   border-radius: 6px;
-  padding: 0.5rem;
+
+  ${({ $size }) =>
+    $size === 'm' &&
+    css`
+      padding: 0.5rem;
+    `}
+
+  ${({ $size }) =>
+    $size === 'sm' &&
+    css`
+      padding: 0.3rem 0.5rem;
+    `}
 
   input {
     text-align: center;
@@ -26,18 +37,6 @@ export const QuantityInputContainer = styled.div<QuantityInputContainerProps>`
     &:focus {
       outline: none;
     }
-
-    ${({ $size }) =>
-      $size === 'm' &&
-      css`
-        padding: 0.5rem;
-      `}
-
-    ${({ $size }) =>
-      $size === 'sm' &&
-      css`
-        padding: 0.3rem 0.5rem;
-      `}
   }
 `
 

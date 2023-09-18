@@ -36,4 +36,24 @@ export const ActionsContainer = styled.div`
   }
 `
 
-export const RemoveButton = styled.button``
+export const RemoveButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: ${({ theme }) => theme.colors['base-text']};
+  font-size: 0.75rem;
+  height: 100%;
+  border: none;
+  background: ${(props) => props.theme.colors['base-button']};
+  padding: 0 0.5rem;
+  border-radius: 6px;
+  transition: 400ms;
+
+  svg {
+    color: ${({ theme }) => theme.colors.purple};
+  }
+
+  &:hover {
+    background: ${({ theme }) => theme.colors['base-hover']};
+  }
+`
