@@ -31,7 +31,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         if (index === coffeeAlreadyExistsInCart) {
           return {
             ...cartItem,
-            quantity: cartItem.quantity + 1,
+            quantity: cartItem.quantity + coffee.quantity,
           }
         } else {
           return cartItem
@@ -42,6 +42,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
   }
 
+  console.log(cartItems)
   return (
     <CartContext.Provider value={{ cartItems, addCoffeeToCart }}>
       {children}
