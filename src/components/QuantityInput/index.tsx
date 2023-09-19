@@ -9,13 +9,13 @@ export function QuantityInput({ size = 'm' }: QuantityInputProps) {
   return (
     <QuantityInputContainer $size={size}>
       <IconWrapper>
-        <Minus size={14} />
+        <Minus size={14} weight='bold' />
       </IconWrapper>
 
       <input type='number' readOnly value={1} />
 
       <IconWrapper>
-        <Plus size={14} />
+        <Plus size={14} weight='bold' />
       </IconWrapper>
     </QuantityInputContainer>
   )
