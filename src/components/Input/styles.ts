@@ -7,7 +7,7 @@ export const InputStyleContainer = styled.input`
   background: ${({ theme }) => theme.colors['base-input']};
   transition: 400ms;
 
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   padding: 0 0.75rem;
   color: ${({ theme }) => theme.colors['base-text']};
 
