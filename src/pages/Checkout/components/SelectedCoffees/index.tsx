@@ -12,6 +12,8 @@ export function SelectedCoffees() {
 
       <DetailsContainer>
         <CoffeeCartCard />
+        <CoffeeCartCard />
+        <CoffeeCartCard />
         <ConfirmationSection />
       </DetailsContainer>
     </SelectedCoffeesContainer>
