@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.form`
-  margin-top: 2.5rem;
+  padding-top: 2.5rem;
   display: flex;
   justify-content: space-between;
   gap: 2rem;
