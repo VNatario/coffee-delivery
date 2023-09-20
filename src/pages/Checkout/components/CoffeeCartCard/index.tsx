@@ -8,15 +8,25 @@ import {
 } from './styles'
 import { CartItem } from '../../../../contexts/CartContext'
 import { formatMoney } from '../../../../utils/formatMoney'
+import { useCart } from '../../../../hooks/useCart'
 
 interface CoffeeCartCardProps {
   coffee: CartItem
 }
 
 export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const { changeCartItemQauntity } = useCart()
+
   const coffeeTotalPrice = coffee.price * coffee.quantity
   const formatedPrice = formatMoney(coffeeTotalPrice)
 
+  function handleIncrease() {
+    changeCartItemQauntity(coffee.id, 'increase')
+  }
+
+  function handleDecrease() {
+    changeCartItemQauntity(coffee.id, 'decrease')
+  }
   return (
     <CoffeeCartCardContainer>
       <div>
@@ -24,7 +34,12 @@ export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
         <div>
           <RegularText $color='subtitle'>{coffee.name}</RegularText>
           <ActionsContainer>
-            <QuantityInput size='sm' quantity={coffee.quantity} />
+            <QuantityInput
+              size='sm'
+              quantity={coffee.quantity}
+              onIncrease={handleIncrease}
+              onDecrease={handleDecrease}
+            />
             <RemoveButton>
               <Trash size={16} />
               REMOVER
