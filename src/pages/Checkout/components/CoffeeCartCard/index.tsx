@@ -6,16 +6,25 @@ import {
   CoffeeCartCardContainer,
   RemoveButton,
 } from './styles'
+import { CartItem } from '../../../../contexts/CartContext'
+import { formatMoney } from '../../../../utils/formatMoney'
 
-export function CoffeeCartCard() {
+interface CoffeeCartCardProps {
+  coffee: CartItem
+}
+
+export function CoffeeCartCard({ coffee }: CoffeeCartCardProps) {
+  const coffeeTotalPrice = coffee.price * coffee.quantity
+  const formatedPrice = formatMoney(coffeeTotalPrice)
+
   return (
     <CoffeeCartCardContainer>
       <div>
-        <img src='https://s3-alpha-sig.figma.com/img/55b1/f9ee/64600f98b2bae456b96fdc624c4b4f47?Expires=1695600000&Signature=awrzDjEJdw192BHNGCrioN3N2kKYuwh8yzvloSUaElwZVD8837nWzketszr1Jvu8glQSYqnb24uyyPPDGfrhBRsaTr4vA9V3CAC~3caoSZO~a-hCmKRRo7eCBrP6n8ojwpQaV6PdW6EBu9XeLa-NgJjAX3pk1k0bvFBK8H57KlLEyOU4iF9vvBzrLW~R1w4Njv-2aE9EhPbfRUMtf0rh~E0zv2DovCTbQ3suFX5TwhphYuifu~dnV7rICvbKs5a~bxCbjxBuSkrBY0chrjx2fYMN0zmrkj0n9R3bYGcMmnhzFGDyLFeYz6qekQ3ATfwXHDAoh77Gb1FvK-rtTtQ5Yg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4' />
+        <img src={coffee.photo} />
         <div>
-          <RegularText $color='subtitle'>Expresso Tradicional</RegularText>
+          <RegularText $color='subtitle'>{coffee.name}</RegularText>
           <ActionsContainer>
-            <QuantityInput size='sm' />
+            <QuantityInput size='sm' quantity={coffee.quantity} />
             <RemoveButton>
               <Trash size={16} />
               REMOVER
@@ -24,7 +33,7 @@ export function CoffeeCartCard() {
         </div>
       </div>
 
-      <p>R$ 9,90</p>
+      <p>R$ {formatedPrice}</p>
     </CoffeeCartCardContainer>
   )
 }
