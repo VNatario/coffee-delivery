@@ -13,6 +13,7 @@ interface CartContextType {
     cartItemId: number,
     type: 'increase' | 'decrease'
   ) => void
+  removeCartItem: (cartItemId: number) => void
 }
 
 interface CartContextProviderProps {
@@ -74,6 +75,17 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
     }
   }
 
+  function removeCartItem(cartItemId: number) {
+    const coffeeAlreadyExistsInCart = cartItems.findIndex(
+      (cartItem) => cartItem.id === cartItemId
+    )
+
+    if (coffeeAlreadyExistsInCart >= 0) {
+      const newCart = cartItems.filter((item) => item.id !== cartItemId)
+      setCartItems(newCart)
+    }
+  }
+
   return (
     <CartContext.Provider
       value={{
@@ -81,6 +93,7 @@ export function CartContextProvider({ children }: CartContextProviderProps) {
         cartQuantity,
         addCoffeeToCart,
         changeCartItemQauntity,
+        removeCartItem,
       }}
     >
       {children}
