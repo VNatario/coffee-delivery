@@ -4,7 +4,7 @@ import { PaymentMethodOptionsContainer } from './styles'
 import { useFormContext } from 'react-hook-form'
 import { RegularText } from '../../../../components/Typography'
 
-const paymentMethods = {
+export const paymentMethods = {
   credit: {
     label: 'Cartão de Crédito',
     icon: <CreditCard size={16} />,

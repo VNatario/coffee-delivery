@@ -4,9 +4,30 @@ import confirmedOrder from '../../assets/confirmed-order.svg'
 import { InfoWithIcon } from '../../components/InfoWithIcon'
 import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import { useTheme } from 'styled-components'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { OrderData } from '../Checkout'
+import { paymentMethods } from '../Checkout/components/CompleteOrderForm/PaymentMethodOptions'
+import { useEffect } from 'react'
+
+interface LocationType {
+  state: OrderData
+}
 
 export function Success() {
   const { colors } = useTheme()
+
+  const { state } = useLocation() as unknown as LocationType
+
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if (!state) {
+      navigate('/')
+    }
+  }, [navigate, state])
+
+  if (!state) return <></>
+
   return (
     <SuccessContainer className='container'>
       <div>
@@ -23,9 +44,12 @@ export function Success() {
             icon={<MapPin weight='fill' />}
             text={
               <RegularText $color='text'>
-                Entraga em <strong>Rua Benvinda Lima Corrêia, 36</strong>
+                Entraga em{' '}
+                <strong>
+                  {state.street}, {state.number}
+                </strong>
                 <br />
-                Farrapos - Suzano, SP
+                {state.district} - {state.city}, {state.uf}
               </RegularText>
             }
           />
@@ -47,7 +71,7 @@ export function Success() {
               <RegularText $color='text'>
                 Pagamento na entrega
                 <br />
-                <strong>Cartão de Crédito</strong>
+                <strong>{paymentMethods[state.paymentMethod].label}</strong>
               </RegularText>
             }
           />
