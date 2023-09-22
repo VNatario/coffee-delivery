@@ -2,7 +2,7 @@ import { Bank, CreditCard, Money } from '@phosphor-icons/react'
 import { PaymentMethodInput } from '../../../../components/PaymentMethodInput'
 import { PaymentMethodOptionsContainer } from './styles'
 
-export const paymentMethods = {
+const paymentMethods = {
   credit: {
     label: 'Cartão de Crédito',
     icon: <CreditCard size={16} />,
