@@ -7,6 +7,12 @@ import { useForm, FormProvider } from 'react-hook-form'
 
 const confirmOrderFormValidationSchema = zod.object({
   cep: zod.string().min(1, 'Informe o cep'),
+  street: zod.string().min(1, 'Informe a Rua'),
+  number: zod.string().min(1, 'Informe o número'),
+  complement: zod.string(),
+  district: zod.string().min(3, 'Informe o bairro'),
+  city: zod.string().min(3, 'Informe a cidade'),
+  uf: zod.string().min(2, 'Informe a UF'),
 })
 
 export type OrderData = zod.infer<typeof confirmOrderFormValidationSchema>
