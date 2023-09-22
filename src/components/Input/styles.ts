@@ -21,8 +21,10 @@ export const InputStyleContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   transition: 400ms;
+  overflow: hidden;
 
-  &:focus {
+  //quando o elemento dentro da div estiver com focus recebe este evento
+  &:focus-within {
     border-color: ${({ theme }) => theme.colors['yellow-dark']};
   }
 `
