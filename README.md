@@ -1,27 +1,39 @@
-# React + TypeScript + Vite
+# Coffee Delivery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O projeto foi construido com intuito de aprendizado e realizar o desafio disposto pela rocketseat - ignite
 
-Currently, two official plugins are available:
+- A Aplicação consiste em um app delivery de café. Onde o mesmo possui 3 páginas.
+  
+   * 1: Página de menu, onde contém os itens disponiveis no menu
+   * 2: Página de preenchimento de dados para entrega, método de pagamento,  e calculo do preço total dos itens e frete.
+   * 3: Página de suceso após realizar a compra, exibindo o endereço de entrega e o metodo selecionado para pagamento.
+ 
+## Como acessar o projeto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ Clone este repositório e instale suas dependências com:
 
-## Expanding the ESLint configuration
+~~~NPM
+npm install
+~~~
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+~~~YARN
+yarn install
+~~~
 
-- Configure the top-level `parserOptions` property like this:
+Apôs instalar as dependencias basta inicializar o projeto com:
+~~~NPM
+npm run dev
+~~~
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+~~~YARN
+yarn dev
+~~~
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+E acessar o link indicad0 no seu terminal ex: http://localhost:5173/
+ 
+## Futuras melhorias
+
+* Implementação/criação de um back-end
+* Adicionar variação de tema escuro
+* Responsividade
+  
