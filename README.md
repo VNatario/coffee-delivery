@@ -29,7 +29,7 @@ npm run dev
 yarn dev
 ~~~
 
-E acessar o link indicad0 no seu terminal ex: http://localhost:5173/
+E acessar o link indicado no seu terminal ex: <http://localhost:5173>
  
 ## Futuras melhorias
 
